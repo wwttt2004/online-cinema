@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        android:id="@+id/mainlinearLayout"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@drawable/back_ground_apple">
+    <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="100"
+            android:orientation="vertical">
+        <!--<LinearLayout-->
+                <!--android:id="@+id/linearLayout1"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginLeft="5dp"-->
+                <!--android:orientation="vertical">-->
+            <!--<TextView-->
+                    <!--android:id="@+id/tvDescr"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text=""-->
+                    <!--android:textSize="17dp">-->
+            <!--</TextView>-->
+            <!--<TextView-->
+                    <!--android:id="@+id/tvPrice"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="left"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:text=""-->
+                    <!--android:textSize="12dp">-->
+            <!--</TextView>-->
+        <!--</LinearLayout>-->
+
+        <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="99"
+                android:orientation="vertical">
+
+            <WebView  xmlns:android="http://schemas.android.com/apk/res/android"
+                      android:id="@+id/webview"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                    />
+        </LinearLayout>
+        <LinearLayout
+                android:id="@+id/linearLayoutSearch"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal|center_vertical">
+            <Button
+                    android:id="@+id/button_favorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/removed_bookmark">
+            </Button>
+            <Button
+                    android:id="@+id/button_online"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/play_video">
+            </Button>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateDrawable="@drawable/progress"
+            android:indeterminateOnly="true"
+            style="@android:style/Widget.ProgressBar.Large"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"/>
+</RelativeLayout>

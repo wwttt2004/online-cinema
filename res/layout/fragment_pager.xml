@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/back_ground_apple"
+        >
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:id="@+id/linearLayout"
+            android:background="@drawable/navigation_item_background">
+
+        <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_menu"
+                android:layout_alignBottom="@+id/textView"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/menu_button_bg_selector"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_centerVertical="true"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Все фильмы"
+                android:id="@+id/textViewTitle"
+                android:layout_marginTop="5dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="vertical" android:gravity="center_horizontal"
+                  android:layout_width="fill_parent" android:layout_height="wrap_content"
+                  android:weightSum="1"
+                  android:layout_alignParentEnd="true"
+                  android:layout_below="@+id/linearLayout">
+
+        <GridView
+                android:layout_height="match_parent"
+                android:id="@+id/gridView"
+                android:layout_width="match_parent"
+                android:numColumns="auto_fit"
+                android:layout_weight="0.8"
+                android:layout_alignParentTop="true"
+                android:horizontalSpacing="10dp"
+                android:verticalSpacing="10dp"
+                android:layout_marginTop="0dp">
+        </GridView>
+
+        <LinearLayout
+                android:id="@+id/mainLinearLayoutControl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_ground_flor"
+                android:layout_weight="0.2">
+
+            <LinearLayout
+                    android:id="@+id/linearLayoutControl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/navigation_item_background"
+                    android:layout_gravity="center_horizontal|center_vertical">
+
+                <Button
+                        android:id="@+id/btn_prev"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="5"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:textSize="15dip"
+                        android:background="@drawable/button_prev_next">
+                </Button>
+                <GridView
+                        android:layout_height="wrap_content"
+                        android:id="@+id/gridViewNavigation"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_weight="30"
+                        android:numColumns="auto_fit"
+                        android:horizontalSpacing="1dp"
+                        >
+                </GridView>
+                <Button
+                        android:id="@+id/btn_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="5"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:textSize="15dip"
+                        android:background="@drawable/button_prev_next">
+                </Button>
+            </LinearLayout>
+            <RelativeLayout
+                    android:id="@+id/linearLayoutSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+                <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/search"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:textSize="20dip"
+                        android:textColor="#ffffff"
+                        android:background="@drawable/search_background"
+                        android:layout_alignParentLeft="true"
+                        android:maxLines="1"
+                        />
+                <Button
+                        android:id="@+id/button_search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="1dp"
+                        android:textSize="15dip"
+                        android:background="@drawable/search_button"
+                        android:layout_alignParentRight="true">
+                </Button>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <SlidingDrawer
+            android:id="@+id/panel_tools"
+            android:layout_width="270dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:content="@+id/content"
+            android:handle="@+id/handle"
+            android:orientation="horizontal"
+            android:background="@android:color/transparent"
+            android:layout_below="@+id/linearLayout">
+
+        <Button
+                android:id="@+id/handle"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                />
+
+        <LinearLayout
+                android:id="@+id/content"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/back_ground_apple"
+                android:weightSum="10"
+                >
+
+            <EditText
+                    android:id="@+id/auto_complete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:maxLines="1">
+            </EditText>
+
+            <GridView
+                    android:id="@+id/list_view_filter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip"
+                    android:verticalSpacing="5dp"
+                    android:numColumns="1"
+                    android:layout_weight="10">
+            </GridView>
+            <GridView
+                    android:id="@+id/search_results"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip"
+                    android:verticalSpacing="5dp"
+                    android:numColumns="1"
+                    android:layout_weight="10">
+            </GridView>
+
+        </LinearLayout>
+
+    </SlidingDrawer>
+    <ProgressBar
+            android:id="@+id/main_progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@android:style/Widget.ProgressBar.Large"
+            android:indeterminateDrawable="@drawable/progress"
+            android:indeterminateOnly="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"/>
+
+    <TextView android:id="@+id/text_progress_bar"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              style="@android:style/Widget.ProgressBar.Large"
+              android:gravity="center_horizontal|center_vertical"
+              android:layout_centerHorizontal="true"
+              android:layout_centerVertical="true"
+              android:layout_centerInParent="true"
+              android:text="0%"
+              android:textColor="@android:color/white"
+              android:textSize="20dip"/>
+
+</RelativeLayout>

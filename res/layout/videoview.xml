@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+    <!--<ProgressBar-->
+    <!--android:id="@+id/progress_bar"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--style="@android:style/Widget.ProgressBar.Small"-->
+    <!--android:layout_marginRight="5dp" />-->
+
+    <io.vov.vitamio.widget.VideoView
+            android:id="@+id/surface_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+
+    <FrameLayout
+            android:id="@+id/operation_volume_brightness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="#00000000"
+            android:orientation="horizontal"
+            android:padding="0dip"
+            android:visibility="invisible" >
+
+        <ImageView
+                android:id="@+id/operation_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/video_volumn_bg" />
+
+        <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:paddingBottom="25dip" >
+
+            <ImageView
+                    android:id="@+id/operation_full"
+                    android:layout_width="94dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:src="@drawable/video_num_bg" />
+
+            <ImageView
+                    android:id="@+id/operation_percent"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:scaleType="matrix"
+                    android:src="@drawable/video_num_front" />
+        </FrameLayout>
+    </FrameLayout>
+    <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateDrawable="@drawable/progress"
+            android:indeterminateOnly="true"
+            style="@android:style/Widget.ProgressBar.Large"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"/>
+
+    <LinearLayout
+            android:id="@+id/progress_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:gravity="center_horizontal|center_vertical"
+            >
+
+        <TextView android:id="@+id/text_progress_bar"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="0%"
+                  android:textColor="@android:color/white"
+                  android:textSize="20dip"/>
+
+        <TextView android:id="@+id/text_traffic"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="0B/s"
+                  android:textColor="@android:color/white"
+                  android:textSize="12dip"/>
+
+    </LinearLayout>
+</RelativeLayout>

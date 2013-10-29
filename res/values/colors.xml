@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_button_sliding">#ff5577bb</color>
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="blue">#ff0000ff</color>
+    <color name="green">#ff00ff00</color>
+    <color name="red">#ffff0000</color>
+    <color name="higtlight">#ff0078f0</color>
+    <color name="durationtext">#ff7d7d7d</color>
+    <color name="background">#ffc3ddea</color>
+    <color name="yellow">#ffffcc00</color>
+    <color name="title">#ff274462</color>
+
+    <!--<color name="color_button_sliding">#ff5577bb</color>-->
+    <!--<color name="white">#ffffff</color>-->
+    <!--<color name="black">#000000</color>-->
+    <color name="border_transparent_color">#FF00FF00</color>
+    <color name="lightblue">#add8e6</color>
+    <color name="powderblue">#b0e0e6</color>
+    <color name="paleturquoise">#afeeee</color>
+</resources>
