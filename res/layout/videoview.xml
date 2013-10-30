@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:orientation="vertical" >
 
-    <!--<ProgressBar-->
-    <!--android:id="@+id/progress_bar"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--style="@android:style/Widget.ProgressBar.Small"-->
-    <!--android:layout_marginRight="5dp" />-->
+    <io.vov.vitamio.widget.CenterLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
 
-    <io.vov.vitamio.widget.VideoView
-            android:id="@+id/surface_view"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true" />
+        <io.vov.vitamio.widget.VideoView
+                android:id="@+id/buffer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
+    </io.vov.vitamio.widget.CenterLayout>
+
+    <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:orientation="horizontal" >-->
 
     <FrameLayout
             android:id="@+id/operation_volume_brightness"
@@ -57,16 +62,17 @@
                     android:src="@drawable/video_num_front" />
         </FrameLayout>
     </FrameLayout>
-    <ProgressBar
-            android:id="@+id/progress_bar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:indeterminateDrawable="@drawable/progress"
-            android:indeterminateOnly="true"
-            style="@android:style/Widget.ProgressBar.Large"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:layout_centerInParent="true"/>
+
+        <ProgressBar
+                android:id="@+id/probar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminateDrawable="@drawable/progress"
+                android:indeterminateOnly="true"
+                style="@android:style/Widget.ProgressBar.Large"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_centerInParent="true"/>
 
     <LinearLayout
             android:id="@+id/progress_layout"
@@ -78,20 +84,22 @@
             android:orientation="vertical"
             android:gravity="center_horizontal|center_vertical"
             >
+        <TextView
+                android:id="@+id/load_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0%"
+                android:textColor="@android:color/white"
+                android:textSize="20dip" />
 
-        <TextView android:id="@+id/text_progress_bar"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:text="0%"
-                  android:textColor="@android:color/white"
-                  android:textSize="20dip"/>
-
-        <TextView android:id="@+id/text_traffic"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:text="0B/s"
-                  android:textColor="@android:color/white"
-                  android:textSize="12dip"/>
-
+        <TextView
+                android:id="@+id/download_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0B/s"
+                android:textColor="@android:color/white"
+                android:textSize="12dip" />
     </LinearLayout>
+    <!--</LinearLayout>-->
+
 </RelativeLayout>

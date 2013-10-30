@@ -34,8 +34,6 @@ public class MovieDetailsActivity extends ActivityUtil {
     Button mBtFavorite;
     private DBConnector mFavoriteDB;
 
-
-
     LinearLayout mLinearLayout;
     ProgressBar mMainProgressBar;
     private WebView webView;
