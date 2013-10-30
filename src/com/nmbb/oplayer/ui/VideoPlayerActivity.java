@@ -145,7 +145,8 @@ public class VideoPlayerActivity extends ActivityUtil implements OnCompletionLis
 
         mWakeLock = new WakeLocker(getApplicationContext());
 
-        if (!LibsChecker.checkVitamioLibs(this, getClass().getName(), R.string.init_decoders, R.raw.libarm))
+        if (!LibsChecker.checkVitamioLibs(this))
+//        if (!LibsChecker.checkVitamioLibs(this, getClass().getName(), R.string.init_decoders, R.raw.libarm))
             return;
 
         Intent intent = getIntent();
@@ -240,6 +241,7 @@ public class VideoPlayerActivity extends ActivityUtil implements OnCompletionLis
         mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
         mMaxVolume = mAudioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
         mVideoView.setVideoURI(Uri.parse(mPath), mVideo.getName());
+//        mVideoView.setVideoURI(Uri.parse(mPath), mVideo.getName());
 
         mVideoView.setOnCompletionListener(this);
 

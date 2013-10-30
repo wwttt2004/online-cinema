@@ -137,6 +137,7 @@ public class MyHitMainPageParser {
 
             mStart = mResponse.indexOf("<table><tbody><tr class=today>");
         }
+
         mStart = -1;
         if(isRewriteVideos){
             mVideos.clear();
@@ -176,12 +177,19 @@ public class MyHitMainPageParser {
         mProductDetailsResponse = video.getHtml();
         video.setUrl(getUrl());
         video.setDescription(getDescription());
+        mProductDetailsResponse = video.getHtml();
+        video.setName(getName());
+        LoggerUtil.log("video html: " + video.getHtml());
 
         return video;
     }
 
     private static String getDescription() throws ParserParamsNoFoundException {
         return getField1("", false, "Описание:", false, "</p>", "");
+    }
+
+    private static String getName() throws ParserParamsNoFoundException {
+        return getField1("", false, "<img alt=\"", true, "\"", "");
     }
 
     private static String getUrl() throws ParserParamsNoFoundException {
